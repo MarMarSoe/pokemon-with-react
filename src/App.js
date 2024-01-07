@@ -1,14 +1,13 @@
-import './App.css';
-import React from 'react';
-import PokeList from './components/PokeList';
+import "./App.css";
+import React from "react";
+import BaseGrid from "./components/BaseGrid";
 
 function App() {
   return (
-    <div className='p-2'>
-      <header className="py-1 font-bold text-violet-900">
-       Poke List
-      </header>
-      <PokeList/>
+    <div className="bg-bgColor">
+      <div className="container mx-auto p-12">
+        <BaseGrid />
+      </div>
     </div>
   );
 }
