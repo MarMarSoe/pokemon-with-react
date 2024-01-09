@@ -13,12 +13,12 @@ const BaseGrid = () => {
 
   return (
     <PokeContext.Provider value={value}>
-      <div className="grid grid-cols-3 gap-3">
-        <div className="col-span-2">
+      <div className="flex sm:flex-row xs:flex-col gap-x-2 p-6 ">
+        <div className="sm:basic-2/3  xs:w-full ">
           <Pokelist />
         </div>
-        <div>
-          <PokeDetail pokeMon={pokeInfo} className="z-2" />
+        <div className="sm:basic-1/3 xs:w-full">
+          <PokeDetail pokeMon={pokeInfo} />
         </div>
       </div>
     </PokeContext.Provider>

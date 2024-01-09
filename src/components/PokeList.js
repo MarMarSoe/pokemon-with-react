@@ -42,11 +42,11 @@ export default function Pokelist() {
         <div>
           <Search />
         </div>
-        <div className="grid lg:grid-cols-4 md:grid-cols-3 gap-x-4 gap-y-14 ">
+        <div className="grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 xs:grid-cols-1 gap-x-4 lg:gap-y-14 md:gap-y-12 sm:gap-y-10 xs:gap-y-8 w-full">
           {pokelist.map((poke) => (
             <div
               key={poke.id + "poke"}
-              className="relative flex justify-center items-center flex-col rounded-xl border shadow-md bg-white  hover:shadow-lg w-56 h-32 group"
+              className="relative flex grow justify-center items-center flex-col gap-y-2 p-2 rounded-xl border shadow-md bg-white w-full hover:shadow-lg group"
               onClick={() => showPokemon(poke.id)}
             >
               <img
@@ -61,7 +61,7 @@ export default function Pokelist() {
                 </p>
               </div>
 
-              <div className="flex justify-center">
+              <div className="flex justify-center items-center gap-1">
                 {poke.types.map((type, index) => (
                   <PokemonType key={index + "type"} type={type.type.name} />
                 ))}

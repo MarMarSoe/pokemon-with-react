@@ -22,7 +22,7 @@ const PokeDetail = ({ pokeMon }) => {
     }, 0);
 
     return (
-      <div className="p-12 fixed w-[500px] mt-16">
+      <div className="p-12 fixed  sm:w-[500px] xs-w-full  mt-16">
         <div className="flex flex-col justify-center items-center place-self-center">
           <img
             src={roateball}
@@ -35,7 +35,7 @@ const PokeDetail = ({ pokeMon }) => {
           // className={`relative bg-white border rounded-md flex flex-col items-center min-h-[700px] p-2 gap-y-4 z-2 transition duration-500
           // ${toggle ? "translate-x-[500px]" : "-translate-x-[500px]"}  `}
 
-          className="relative bg-white border rounded-md flex flex-col items-center min-h-[800px] p-2 gap-y-4 z-2 transition duration-500"
+          className="relative bg-white border rounded-md flex flex-col items-center min-h-[500px] p-2 gap-y-4 z-2 transition duration-500"
         >
           <img
             src={pokeMon.imgUrl}
@@ -49,7 +49,7 @@ const PokeDetail = ({ pokeMon }) => {
             </p>
           </div>
 
-          <div className="flex justify-center">
+          <div className="flex justify-center items-center gap-1">
             {pokeMon.types.map((type, index) => (
               <PokemonType key={index + "type"} type={type.type.name} />
             ))}
@@ -60,17 +60,17 @@ const PokeDetail = ({ pokeMon }) => {
             <p className="text-center">{pokeMon.flavorText}</p>
           </div>
 
-          <div className="grid grid-cols-2 gap-x-6">
-            <div className="flex flex-col">
+          <div className="flex flex-row justify-center w-full">
+            <div className="flex flex-col justify-center items-center grow">
               <p className="text-center font-bold">Height</p>
-              <span className="text-center rounded-2xl bg-gray-200 w-40 leading-loose">
+              <span className="text-center rounded-2xl bg-gray-200 lg:w-40 md:w-32 sm:w-full leading-loose">
                 {pokeMon.height}
               </span>
             </div>
 
-            <div className="flex flex-col">
+            <div className="flex flex-col justify-center items-center grow">
               <p className="text-center font-bold">Weight</p>
-              <span className="text-center rounded-2xl  bg-gray-200 w-40 leading-loose">
+              <span className="text-center rounded-2xl  bg-gray-200 lg:w-40 md:w-32 sm:w-full leading-loose">
                 {pokeMon.weight}
               </span>
             </div>
@@ -78,7 +78,7 @@ const PokeDetail = ({ pokeMon }) => {
 
           <div>
             <p className="text-center font-bold">Abilities</p>
-            <div className="flex flex-row gap-x-1">
+            <div className="flex flex-row justify-center items-center gap-x-1">
               {pokeMon.abilities.map((ability) => {
                 return (
                   <div
@@ -144,7 +144,7 @@ const PokeDetail = ({ pokeMon }) => {
     );
   } else {
     return (
-      <div className="p-12 fixed w-[500px]">
+      <div className="p-12 fixed  sm:w-[500px] xs-w-full mt-16">
         <NoPokemon />
       </div>
     );

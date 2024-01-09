@@ -26,7 +26,7 @@ const PokemonType = ({ type }) => {
 
   return (
     <p
-      className={`py-1 px-2 m-2 text-sm rounded-md ${bgColor} capitalize font-semibold`}
+      className={`text-center text-sm w-12 rounded-md ${bgColor} capitalize font-semibold`}
     >
       {type}
     </p>
