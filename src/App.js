@@ -5,9 +5,7 @@ import BaseGrid from "./components/BaseGrid";
 function App() {
   return (
     <div className="bg-bgColor">
-      <div className="container max-w-screen-lg mx-auto">
-        <BaseGrid />
-      </div>
+      <BaseGrid />
     </div>
   );
 }

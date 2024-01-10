@@ -38,15 +38,15 @@ export default function Pokelist() {
 
   return (
     <PokeListContext.Provider value={value}>
-      <div className="grid gap-y-12 ">
+      <div className="grid gap-y-12 w-full">
         <div>
           <Search />
         </div>
-        <div className="grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 xs:grid-cols-1 gap-x-4 lg:gap-y-14 md:gap-y-12 sm:gap-y-10 xs:gap-y-8 w-full">
+        <div className="grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 xs:grid-cols-1 gap-10 place-content-stretch">
           {pokelist.map((poke) => (
             <div
               key={poke.id + "poke"}
-              className="relative flex grow justify-center items-center flex-col gap-y-2 p-2 rounded-xl border shadow-md bg-white w-full hover:shadow-lg group"
+              className="relative flex justify-center items-center flex-col gap-y-2 p-2 rounded-xl border shadow-md bg-white w-[200px] hover:shadow-lg group"
               onClick={() => showPokemon(poke.id)}
             >
               <img

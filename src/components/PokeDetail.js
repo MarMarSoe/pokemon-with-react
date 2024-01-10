@@ -22,7 +22,7 @@ const PokeDetail = ({ pokeMon }) => {
     }, 0);
 
     return (
-      <div className="p-12 fixed  sm:w-[500px] xs-w-full  mt-16">
+      <div className="grid gap-y-1 p-12 fixed  mt-16 w-[500px]">
         <div className="flex flex-col justify-center items-center place-self-center">
           <img
             src={roateball}
@@ -35,7 +35,7 @@ const PokeDetail = ({ pokeMon }) => {
           // className={`relative bg-white border rounded-md flex flex-col items-center min-h-[700px] p-2 gap-y-4 z-2 transition duration-500
           // ${toggle ? "translate-x-[500px]" : "-translate-x-[500px]"}  `}
 
-          className="relative bg-white border rounded-md flex flex-col items-center min-h-[500px] p-2 gap-y-4 z-2 transition duration-500"
+          className="relative bg-white border rounded-md flex flex-col items-center min-h-[800px] p-2 gap-y-4 z-2 transition duration-500"
         >
           <img
             src={pokeMon.imgUrl}
@@ -144,7 +144,7 @@ const PokeDetail = ({ pokeMon }) => {
     );
   } else {
     return (
-      <div className="p-12 fixed  sm:w-[500px] xs-w-full mt-16">
+      <div className="grid gap-y-1 p-12 fixed mt-16 w-[500px]">
         <NoPokemon />
       </div>
     );
