@@ -22,7 +22,7 @@ const PokeDetail = ({ pokeMon }) => {
     }, 0);
 
     return (
-      <div className="grid gap-y-1 p-12 fixed  mt-16 w-[500px]">
+      <div className="grid gap-y-1 fixed p-5 mt-16 lg:w-[400px] md:w-[300px]">
         <div className="flex flex-col justify-center items-center place-self-center">
           <img
             src={roateball}
@@ -40,7 +40,7 @@ const PokeDetail = ({ pokeMon }) => {
           <img
             src={pokeMon.imgUrl}
             alt={pokeMon.name}
-            className="absolute -top-32 w-40 h-40"
+            className="absolute lg:-top-28 lg:w-36 lg:h-36 md:w-32 md:h-32 md:-top-28"
           />
           <div className="mt-12">
             <p className="font-semibold text-sm text-center">N°{pokeMon.id}</p>
@@ -144,7 +144,7 @@ const PokeDetail = ({ pokeMon }) => {
     );
   } else {
     return (
-      <div className="grid gap-y-1 p-12 fixed mt-16 w-[500px]">
+      <div className="grid gap-y-1 p-5 fixed mt-16 w-[400px]">
         <NoPokemon />
       </div>
     );

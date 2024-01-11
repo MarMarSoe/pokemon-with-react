@@ -42,7 +42,7 @@ export default function Pokelist() {
         <div>
           <Search />
         </div>
-        <div className="grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 xs:grid-cols-1 gap-10 place-content-stretch">
+        <div className="grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 xs:grid-cols-1 gap-x-5 gap-y-10 place-content-stretch">
           {pokelist.map((poke) => (
             <div
               key={poke.id + "poke"}

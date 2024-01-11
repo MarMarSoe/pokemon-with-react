@@ -13,12 +13,12 @@ const BaseGrid = () => {
 
   return (
     <PokeContext.Provider value={value}>
-      <div className="container max-w-screen-lg mx-auto px-4">
+      <div className="max-w-full p-6 mx-auto">
         <div className="flex flex-row flex-grow">
-          <div className="basic-full">
+          <div >
             <Pokelist />
           </div>
-          <div className="basic-full">
+          <div>
             <PokeDetail pokeMon={pokeInfo} />
           </div>
         </div>
