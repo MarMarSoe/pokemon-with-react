@@ -144,7 +144,7 @@ const PokeDetail = ({ pokeMon }) => {
     );
   } else {
     return (
-      <div className="grid gap-y-1 p-5 fixed mt-16 w-[400px]">
+      <div className="grid gap-y-1 p-5 fixed mt-16 lg:w-[400px] md:w-[300px]">
         <NoPokemon />
       </div>
     );
