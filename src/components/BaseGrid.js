@@ -14,8 +14,8 @@ const BaseGrid = () => {
   return (
     <PokeContext.Provider value={value}>
       <div className="max-w-full p-6 mx-auto">
-        <div className="flex flex-row flex-grow justify-between">
-          <div >
+        <div className="flex flex-row flex-grow justify-center">
+          <div>
             <Pokelist />
           </div>
           <div>
